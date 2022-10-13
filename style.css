@@ -1,5 +1,5 @@
 /* Images created by: https://unsplash.com/@pawel_czerwinski */
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
 html {
   box-sizing: border-box;
 }
@@ -11,19 +11,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: "Quicksand", sans-serif;
   font-size: 12px;
 }
+/* Player Container */
+.player_container {
+  height: 500px;
+  width: 400px;
+  background: rgb(125, 183, 238);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+}
 
-
-
-.img-container {
-
+.img_container {
   position: relative;
+  height: 300px;
+  width: 300px;
   top: -50px;
   left: 50px;
 }
 
+.img_container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
 
 h2 {
   font-size: 25px;
@@ -39,7 +53,7 @@ h3 {
 }
 
 /* Progress */
-.progress-container {
+.progress_container {
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -57,7 +71,7 @@ h3 {
   transition: width 0.1s linear;
 }
 
-.duration-wrapper {
+.duration_wrapper {
   position: relative;
   top: -25px;
   display: flex;
@@ -65,33 +79,37 @@ h3 {
 }
 
 /* Controls */
-.player-controls {
+.player_controls {
   position: relative;
   top: -15px;
   left: 120px;
-  width: 200px;
+  width: 220px;
 }
 
-.fas {
+.fa-solid {
   font-size: 30px;
   color: rgb(129, 129, 129);
   margin-right: 30px;
-
+  cursor: pointer;
+  user-select: none;
 }
 
+.fa-solid:hover {
+  filter: brightness(80%);
+}
 
-
-.main-button {
+.main_button {
   font-size: 40px;
   position: relative;
   top: 3px;
 }
 
 /* Media Query: iPhone (Vertical) */
-@media screen and (max-width: 376px) {
-
-
-  .img-container {
+@media screen and (max-width: 390px) {
+  .player_container {
+    width: 95vw;
+  }
+  .img_container {
     left: 29px;
   }
 
@@ -103,7 +121,7 @@ h3 {
     font-size: 15px;
   }
 
-  .player-controls {
+  .player_controls {
     top: -10px;
     left: 100px;
   }
